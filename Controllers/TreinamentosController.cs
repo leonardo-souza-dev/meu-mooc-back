@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System.Web.Http.Cors;
 
-namespace meu_mooc_back.Controllers
+namespace MeuMoocBack.Controllers
 {
     [ApiController]
     [Route("[controller]")]

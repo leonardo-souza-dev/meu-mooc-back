@@ -11,7 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
-namespace meu_mooc_back
+namespace MeuMoocBack
 {
     public class Startup
     {

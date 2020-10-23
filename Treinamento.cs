@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace meu_mooc_back
+namespace MeuMoocBack
 {
     public class Treinamento
     {

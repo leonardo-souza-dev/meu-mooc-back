@@ -1,6 +1,6 @@
 using System;
 
-namespace meu_mooc_back
+namespace MeuMoocBack
 {
     public class TreinamentoPreview
     {
