@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29920.165
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MeuMoocBack", "MeuMoocBack.csproj", "{DA562C89-F283-4F43-9AC4-3188BBCE0A7D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DA562C89-F283-4F43-9AC4-3188BBCE0A7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA562C89-F283-4F43-9AC4-3188BBCE0A7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA562C89-F283-4F43-9AC4-3188BBCE0A7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA562C89-F283-4F43-9AC4-3188BBCE0A7D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A5C90E01-D8BD-4D2D-B07F-6D2CB67B95E1}
+	EndGlobalSection
+EndGlobal
