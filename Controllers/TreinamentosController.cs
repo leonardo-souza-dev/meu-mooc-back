@@ -12,7 +12,7 @@ namespace MeuMoocBack.Controllers
     [Route("[controller]")]
     public class TreinamentosController : ControllerBase
     {
-        [HttpGet("")]
+        [HttpGet]
         public IEnumerable<TreinamentoPreview> Get()
         {
             return new List<TreinamentoPreview> {
@@ -21,8 +21,8 @@ namespace MeuMoocBack.Controllers
             };
         }
         
-        [HttpGet("{id:int}")]
-        public Treinamento Get([FromQuery]int id)
+        [HttpGet("{id}")]
+        public Treinamento Get(int id)
         {
             return new Treinamento 
             { 

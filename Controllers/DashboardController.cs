@@ -12,8 +12,8 @@ namespace MeuMoocBack.Controllers
     [Route("[controller]")]
     public class DashboardController : ControllerBase
     {
-        [HttpGet("")]
-        public Dashboard Get()
+        [HttpGet("{id}")]
+        public Dashboard Get(int id)
         {
             var dashboard = new Dashboard{
                 TreinamentosProgresso =  
