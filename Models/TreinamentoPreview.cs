@@ -1,6 +1,6 @@
 using System;
 
-namespace MeuMoocBack
+namespace MeuMoocBack.Models
 {
     public class TreinamentoPreview
     {

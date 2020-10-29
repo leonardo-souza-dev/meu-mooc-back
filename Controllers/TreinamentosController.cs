@@ -5,48 +5,27 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System.Web.Http.Cors;
+using MeuMoocBack.Models;
+using MeuMoocBack.Repository;
 
 namespace MeuMoocBack.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class TreinamentosController : ControllerBase
+    public class TreinamentoController : ControllerBase
     {
+        public readonly TreinamentoContext TreinamentoContext = new TreinamentoContext();
+
         [HttpGet]
-        public IEnumerable<TreinamentoPreview> Get()
+        public List<Treinamento> Get()
         {
-            return new List<TreinamentoPreview> {
-                new TreinamentoPreview{ Id = 1, Nome = "nUnit"},
-                new TreinamentoPreview{ Id = 2, Nome = "cypress"}
-            };
+            return TreinamentoContext.ObterTodos();
         }
-        
+
         [HttpGet("{id}")]
         public Treinamento Get(int id)
         {
-            return new Treinamento 
-            { 
-                Id = 1, 
-                Nome = "nUnit",
-                Aulas = new List<Aula>
-                {
-                    new Aula
-                    {
-                        Num = 1,
-                        Nome = "Configurando ambiente"
-                    },
-                    new Aula
-                    {
-                        Num = 2,
-                        Nome = "Hello world"
-                    },
-                    new Aula
-                    {
-                        Num = 3,
-                        Nome = "Conclusão"
-                    }
-                }
-            };
+            return TreinamentoContext.Obter(id);
         }
     }
 }

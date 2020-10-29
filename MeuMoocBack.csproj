@@ -5,9 +5,14 @@
     <RootNamespace>MeuMoocBack</RootNamespace>
   </PropertyGroup>
 
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'meu_mooc_back' " />
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNet.WebApi.Cors" Version="5.2.7" />
   </ItemGroup>
 
 
+  <ItemGroup>
+    <Folder Include="Models\" />
+    <Folder Include="Repository\" />
+  </ItemGroup>
 </Project>
