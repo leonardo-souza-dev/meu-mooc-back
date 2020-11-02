@@ -13,20 +13,25 @@ namespace MeuMoocBack.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class DashboardController : ControllerBase
+    public class DashboardsController : ControllerBase
     {
         public readonly UsuarioContext _usuarioContext = new UsuarioContext();
         
-        [HttpGet("{id}")]
-        public Dashboard Get(int id)
+        [HttpGet]
+        [Route("usuario/{id:int}")]
+        public async Task<Dashboard> Get(int id)
         {
-            var usuario = _usuarioContext.Obter(id);
+            Usuario usuario = await _usuarioContext.Obter(id);
+
+            Usuario usuario2 = new Usuario(1, "Leo", "78978");
+            usuario2.Treinamentos.ForEach(x => x.Aulas.Add(new Aula(1, "", new VideoAula(""))));
+
             var treinamentosProgresso = new List<TreinamentoProgresso>();
             usuario.Treinamentos.ForEach(x => treinamentosProgresso.Add(new TreinamentoProgresso(x, 10)));
 
             var dashboard = new Dashboard
             {
-                UsuarioId = usuario.Id,
+                Usuario = usuario,
                 TreinamentosProgresso = treinamentosProgresso
             };
 

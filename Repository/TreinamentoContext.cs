@@ -1,6 +1,7 @@
 ﻿using System.Linq;
 using System.Collections.Generic;
 using MeuMoocBack.Models;
+using System.Threading.Tasks;
 
 namespace MeuMoocBack.Repository
 {
@@ -22,14 +23,14 @@ namespace MeuMoocBack.Repository
             this.Treinamentos.Add(treinamento2);
         }
 
-        public Treinamento Obter(int id)
+        public async Task<Treinamento> Obter(int id)
         {
-            return this.Treinamentos.FirstOrDefault(x => x.Id == id);
+            return await Task.FromResult<Treinamento>(this.Treinamentos.FirstOrDefault(x => x.Id == id));
         }
 
-        public List<Treinamento> ObterTodos()
+        public async Task<List<Treinamento>> ObterTodos()
         {
-            return this.Treinamentos;
+            return await Task.FromResult<List<Treinamento>>(this.Treinamentos);
         }
     }
 }

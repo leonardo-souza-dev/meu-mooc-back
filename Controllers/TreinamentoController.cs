@@ -17,15 +17,16 @@ namespace MeuMoocBack.Controllers
         public readonly TreinamentoContext TreinamentoContext = new TreinamentoContext();
 
         [HttpGet]
-        public List<Treinamento> Get()
+        [Route("todos")]
+        public async Task<List<Treinamento>> Get()
         {
-            return TreinamentoContext.ObterTodos();
+            return await TreinamentoContext.ObterTodos();
         }
 
-        [HttpGet("{id}")]
-        public Treinamento Get(int id)
+        [HttpGet("{id:int}")]
+        public async Task<Treinamento> Get(int id)
         {
-            return TreinamentoContext.Obter(id);
+            return await TreinamentoContext.Obter(id);
         }
     }
 }
